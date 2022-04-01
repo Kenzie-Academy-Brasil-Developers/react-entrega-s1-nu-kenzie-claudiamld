@@ -25,6 +25,41 @@
   max-width: 90vw;
 } */
 
+.formBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.btnFiltros{
+  display: flex;
+  flex-direction: row;
+  width: 60vw;
+  margin-top: 30px;
+}
+
+h3{
+  margin-right: 250px;
+  color: #212529;
+  font-size: 16px;
+}
+
+.btnTodos{
+  width: 70px;
+  margin-right: 20px;
+}
+
+.grayButton{
+  width: 90px;
+  background-color: #E9ECEF;
+  color: #868E96;
+  margin-right: 20px;
+}
+
+.grayButton:hover{
+  background-color: #868E96;
+  color: #F8F9FA;
+}
 
 @keyframes App-logo-spin {
   from {
