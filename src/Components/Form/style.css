@@ -1,0 +1,90 @@
+.cardForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    margin: 50px 0px 0px 100px;
+    border: 1px solid #E9ECEF;
+    height: 350px;
+}
+form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 300px;
+    margin: 50px 0px 0px 0px;
+    padding: 0px 20px;
+    border-radius: 4px;
+}
+label{
+    color: #212529;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+input{
+    margin-bottom: 20px;
+    background-color: #F8F9FA;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    color: #868E96;
+    font-family: 'Inter', sans-serif;
+}
+p{
+    font-size: 12px;
+    width: 100vw;
+    margin: -16px 0px 30px 3px;
+    color: #868E96;
+}
+div{
+    display: flex;
+    flex-direction: column;
+}
+.description{
+    width: 100vw;
+}
+
+.valuePrice{
+    max-width: 30vw;
+    width: 7vw;
+    margin-right: 60px;
+    border-radius: 8px;
+}
+
+.type{
+    max-width: 30vw;
+    width: 8vw;
+    height: 5vh;
+    border: none;
+    border-radius: 8px;
+    background-color: #F8F9FA;
+}
+
+option{
+    background-color: #E9ECEF;
+    color: #868E96;
+    border: none;
+    height: 30px;
+}
+
+.description-label{
+    margin-right: 240px;
+}
+button{
+    width: 20vw;
+    background-color: #FD377E;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    height: 40px;
+    margin-top: 10px;
+}
+button:hover{
+    background-color: #E34981;
+    cursor: pointer;
+}
+
+
+    
