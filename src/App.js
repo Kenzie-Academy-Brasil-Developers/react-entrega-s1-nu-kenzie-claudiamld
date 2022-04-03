@@ -1,26 +1,38 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { Form } from './Components/Form';
 import { Header } from './Components/Header';
 import { Button } from './Components/Button';
 import { List } from './Components/List';
+import { TotalMoney } from './Components/TotalMoney';
 
 function App() {
 
-  const [listTransactions, setListTransactions] = useState([
-    // {description: "Salário recebido", transactionType: "entrada", valuePrice: 2500},
-    // {description: "Conta de luz", transactionType: "saída", valuePrice: -150},
-  ])
+  const [listTransactions, setListTransactions] = useState([])
+  const [balance, setBalance] = useState(0)
 
-  console.log(listTransactions);
+  const balanceCalculate = () => {
+    const receives = listTransactions.filter(transaction => transaction.transactionType === 'Entrada').reduce((acc, currValue) => currValue.valuePrice + acc, 0)
+    const withdraws = listTransactions.filter(transaction => transaction.transactionType === 'Despesa').reduce((acc, currValue) => currValue.valuePrice + acc, 0)
+    const result = receives - withdraws
+    setBalance(result)
+  }
+
+  useEffect(() => {
+    balanceCalculate()
+  }, [listTransactions])
+
   return (
     <div className="App">
         <Header />
       <div className="App-body">
 
+      <div>
         <div className='formBox'>
           <Form listTransactions={listTransactions} setListTransactions={setListTransactions} />
         </div>
+        <TotalMoney totalValue={balance} />
+      </div>
 
         <div className='cardsVitrine'>
           <div className='btnFiltros'>

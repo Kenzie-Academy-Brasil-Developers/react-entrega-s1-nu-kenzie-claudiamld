@@ -11,7 +11,7 @@ export const List = ({listTransactions}) => {
                 <Card
                     key={index} 
                     description={transaction.description} 
-                    valuePrice={ `R$ ${transaction.valuePrice},00`} 
+                    valuePrice={transaction.valuePrice}
                     transactionType={transaction.transactionType} 
                 />
             ))}

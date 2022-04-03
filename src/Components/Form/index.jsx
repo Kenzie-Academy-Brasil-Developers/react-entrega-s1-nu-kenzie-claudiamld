@@ -12,7 +12,7 @@ export const Form = ({listTransactions, setListTransactions}) => {
 
         const transaction = {
           description: description, 
-          valuePrice: valuePrice,
+          valuePrice: Number(valuePrice),
           transactionType: transactionType
         }
         
