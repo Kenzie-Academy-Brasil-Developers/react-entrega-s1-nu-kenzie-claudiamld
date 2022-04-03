@@ -1,0 +1,15 @@
+.cardsList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 4rem;
+    height: 100vh;
+    width: 90%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px){
+    .cardsList{
+        margin-left: 1rem;
+        align-items: center;
+    }
+}

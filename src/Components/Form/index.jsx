@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import {Button} from './../Button/index'
 import './style.css'
 
 export const Form = ({listTransactions, setListTransactions}) => {
@@ -29,7 +30,7 @@ export const Form = ({listTransactions, setListTransactions}) => {
                     value={description}
                     onChange={(event) => setDescription(event.target.value)}
                 />
-                <p>Ex.:Compra de roupas</p>
+                <p className='spanExemploForm'>Ex.:Compra de roupas</p>
 
                 <div className='valueType'>
                     <label htmlFor="">Valor</label>
@@ -50,13 +51,13 @@ export const Form = ({listTransactions, setListTransactions}) => {
                         onChange={(event) => setTransactionType(event.target.value)}
                     >
                         <option value=''></option>
-                        <option value='entrada'>Entrada</option>
-                        <option value='saida'>Despesa</option>
+                        <option value='Entrada'>Entrada</option>
+                        <option value='Despesa'>Despesa</option>
                     </select>
                 </div>
             </form>
-
-            <button onClick={() => handleAddTransactions()}>Inserir valor</button>
+            
+            <Button onClick={handleAddTransactions} className='formButton' >Inserir valor</Button>
         </div>
     )
 }

@@ -1,10 +1,11 @@
 import './style.css'
+import {Button} from './../Button/index'
 
 export const Header = () => {
     return (
         <div className="Header">
             <h1>Nu <span>Kenzie</span></h1>
-            <button>Início</button>
+            <Button className='headerButton'>Início</Button>
         </div>
     )
 }
