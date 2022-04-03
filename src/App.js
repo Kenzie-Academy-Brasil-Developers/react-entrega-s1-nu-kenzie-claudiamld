@@ -41,7 +41,7 @@ function App() {
             <Button className='grayButton'>Entradas</Button>
             <Button className='grayButton'>Despesas</Button>
           </div>
-          <List listTransactions={listTransactions} />
+          <List listTransactions={listTransactions} setListTransactions={setListTransactions} />
 
         </div>
         

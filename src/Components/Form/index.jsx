@@ -9,11 +9,14 @@ export const Form = ({listTransactions, setListTransactions}) => {
     const [transactionType, setTransactionType] = useState('')
 
     const handleAddTransactions = () => {
+        let newId;
+        listTransactions.length < 1 ? newId = 1 : newId = listTransactions.length + 1 
 
         const transaction = {
-          description: description, 
-          valuePrice: Number(valuePrice),
-          transactionType: transactionType
+            id: newId,
+            description: description, 
+            valuePrice: Number(valuePrice),
+            transactionType: transactionType
         }
         
         const newArr = [...listTransactions, transaction]
