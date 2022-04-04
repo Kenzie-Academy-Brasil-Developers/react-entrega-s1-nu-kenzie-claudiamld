@@ -5,7 +5,7 @@
     align-items: center;
     max-width: 100vw;
     width: 90vw;
-    margin: 3rem 0px 0px 0px;
+    margin: 3rem 0rem 0rem 0rem;
     border: 1px solid #E9ECEF;
     border-radius: 8px;
     height: 20rem;
@@ -32,13 +32,16 @@ input{
     color: #868E96;
     font-family: 'Inter', sans-serif;
 }
+input:focus{
+    outline: 1px solid #212529;
+}
 .spanExemploForm{
     font-size: 12px;
     width: 100vw;
     margin: -14px 0px 25px 3px;
     color: #868E96;
 }
-div{
+.valueType{
     display: flex;
     flex-direction: column;
 }
@@ -166,7 +169,7 @@ option{
         margin: -16px 0px 30px 3px;
         color: #868E96;
     }
-    div{
+    .valueType{
         display: flex;
         flex-direction: column;
     }

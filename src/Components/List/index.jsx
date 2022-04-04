@@ -9,6 +9,7 @@ export const List = ({listTransactions, setListTransactions}) => {
                 <Card
                     key={index} 
                     id={transaction.id}
+                    className={transaction.transactionType === 'Entrada' ? 'cardActive' : 'card'}
                     description={transaction.description} 
                     valuePrice={transaction.valuePrice}
                     transactionType={transaction.transactionType} 
