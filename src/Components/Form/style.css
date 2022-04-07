@@ -55,6 +55,10 @@ input:focus{
     margin-right: 3rem;
     border-radius: 0.6rem;
 }
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
 
 .type{
     max-width: 30vw;

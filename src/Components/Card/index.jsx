@@ -5,7 +5,8 @@ import './style.css'
 export const Card = ({className, listTransactions, setListTransactions, id, description, valuePrice, transactionType}) => {
 
     const handleRemove = (value) => {
-        const newArr = listTransactions.filter(transaction => transaction.id !== value)
+        const newArr = listTransactions.filter(
+        (transaction) => transaction.id !== value);
         setListTransactions(newArr)
     }
 

@@ -5,23 +5,27 @@ import './style.css'
 export const Form = ({listTransactions, setListTransactions}) => {
 
     const [description, setDescription] = useState('')
-    const [valuePrice, setValuePrice] = useState('')
+    const [valuePrice, setValuePrice] = useState(0)
     const [transactionType, setTransactionType] = useState('')
 
     const handleAddTransactions = () => {
         let newId;
-        listTransactions.length < 1 ? newId = 1 : newId = listTransactions.length + 1 
+        listTransactions.length < 1 ? newId = 1 : newId = listTransactions.length +1
 
-        const transaction = {
-            id: newId,
-            description: description, 
-            valuePrice: Number(valuePrice),
-            transactionType: transactionType
+        if(valuePrice > 0){
+            const transaction = {
+                id: newId,
+                description: description, 
+                valuePrice: Number(valuePrice), 
+                transactionType: transactionType
+            }
+            const newArr = [...listTransactions, transaction]
+            setListTransactions(newArr)
         }
-        
-        const newArr = [...listTransactions, transaction]
-        setListTransactions(newArr)
+
     }
+    
+    console.log(listTransactions);
 
     return (
         <div className='cardForm'>
@@ -41,6 +45,7 @@ export const Form = ({listTransactions, setListTransactions}) => {
                         className='valuePrice' 
                         placeholder='R$' 
                         value={valuePrice}
+                        type= 'number'
                         onChange={(event) => setValuePrice(event.target.value)}
                     />   
                 </div>
