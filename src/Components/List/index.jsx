@@ -3,7 +3,6 @@ import './style.css'
 
 export const List = ({listTransactions, setListTransactions}) => {
 
-    console.log(listTransactions);
     return(
         <div className="cardsList">
             {listTransactions.map((transaction, index) =>  (
@@ -16,8 +15,8 @@ export const List = ({listTransactions, setListTransactions}) => {
                     transactionType={transaction.transactionType} 
                     setListTransactions={setListTransactions}
                     listTransactions={listTransactions}
-                    />
-                    ))}
+                />
+            ))}
         </div>
     )
 }

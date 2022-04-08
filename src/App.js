@@ -10,29 +10,12 @@ function App() {
 
   const [listTransactions, setListTransactions] = useState([])
   const [balance, setBalance] = useState(0)
-  const [positivesCards, setPositivesCards] = useState([])
-  const [negativecards, setNegativeCards] = useState([])
 
   const balanceCalculate = () => {
     const receives = listTransactions.filter(transaction => transaction.transactionType === 'Entrada').reduce((acc, currValue) => currValue.valuePrice + acc, 0)
     const withdraws = listTransactions.filter(transaction => transaction.transactionType === 'Despesa').reduce((acc, currValue) => currValue.valuePrice + acc, 0)
     const result = receives - withdraws
     setBalance(result)
-  }
-
-  const renderAllCards = () => {
-    const allCards = listTransactions.filter(transaction => transaction)
-    setListTransactions(listTransactions)
-  }
-
-  const renderPositivesCards = () => {
-    const receives = listTransactions.filter(transaction => transaction.transactionType === 'Entrada')
-    setPositivesCards(receives)
-  }
-
-  const renderNegativeCards = () => {
-    const withdraws = listTransactions.filter(transaction => transaction.transactionType === 'Despesa')
-    setNegativeCards(withdraws)
   }
 
   useEffect(() => {
@@ -49,7 +32,7 @@ function App() {
         <div className='formBox'>
           <Form listTransactions={listTransactions} setListTransactions={setListTransactions} />
         </div>
-        <TotalMoney totalValue={balance} />
+          <TotalMoney totalValue={balance} />
       </div>
 
         <div className='cardsVitrine'>

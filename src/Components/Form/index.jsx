@@ -24,8 +24,6 @@ export const Form = ({listTransactions, setListTransactions}) => {
         }
 
     }
-    
-    console.log(listTransactions);
 
     return (
         <div className='cardForm'>
